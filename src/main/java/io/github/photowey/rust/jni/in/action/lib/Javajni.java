@@ -34,4 +34,15 @@ public class Javajni {
     }
 
     public static native int add0(int left, int right);
+
+    /**
+     * $ java -cp . io.github.photowey.rust.jni.in.action.lib.Javajni
+     * @param args
+     */
+    /*
+    public static void main(String[] args) {
+        int result = Javajni.add(1024, 1024);
+        System.out.println("Hello Rust jni: 1024 + 1024 = " + result);
+    }
+    */
 }
