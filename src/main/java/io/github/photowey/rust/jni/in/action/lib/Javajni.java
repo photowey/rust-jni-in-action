@@ -33,7 +33,21 @@ public class Javajni {
         return add0(left, right);
     }
 
-    public static native int add0(int left, int right);
+    public static String hello(String input) {
+        return hello0(input);
+    }
+
+    public static String uppercase(String input) {
+        return uppercase0(input);
+    }
+
+    // ----------------------------------------------------------------
+
+    private static native int add0(int left, int right);
+
+    private static native String hello0(String input);
+
+    private static native String uppercase0(String input);
 
     /**
      * $ java -cp . io.github.photowey.rust.jni.in.action.lib.Javajni

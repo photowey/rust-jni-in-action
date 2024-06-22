@@ -16,6 +16,7 @@
 package io.github.photowey.rust.jni.in.action.lib;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 /**
  * {@code JavajniTest}
@@ -26,9 +27,24 @@ import org.junit.jupiter.api.Assertions;
  */
 class JavajniTest {
 
+    @Test
+    void testOk() {
+        Assertions.assertTrue(true);
+    }
+
     //@Test
     void testItWorks() {
         Assertions.assertEquals(1 << 2, Javajni.add(2, 2));
         Assertions.assertEquals(1 << 11, Javajni.add(1024, 1024));
+    }
+
+    //@Test
+    void testHello() {
+        Assertions.assertEquals("Hello, photowey!", Javajni.hello("photowey"));
+    }
+
+    //@Test
+    void testUppercase() {
+        Assertions.assertEquals("PHOTOWEY", Javajni.uppercase("photowey"));
     }
 }
